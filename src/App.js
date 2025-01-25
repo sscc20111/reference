@@ -1,7 +1,15 @@
 import logo from "./logo.svg";
 import "./App.css";
+import loop from './assets/js/loop'
+import { useEffect } from "react";
+
+
 
 function App() {
+  useEffect(()=>{
+    loop()
+  },[]);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -20,8 +28,8 @@ function App() {
             {/* <div className='imgBox'></div> */}
             <div className="textBox">
               <p>
-                <div>잉크와 픽셀의 조화로</div>
-                <div>창의적인 디자인을 구현하는 디자이너</div>
+                잉크와 픽셀의 조화로 <br></br>{/* <p></p> 태그 안에 <div>태그가 있으면 안됩니다! (br로 줄넘김, ) */}
+                창의적인 디자인을 구현하는 디자이너{/* <p></p> 태그 안에 <div>태그가 있으면 안됩니다! (br로 줄넘김, ) */}
               </p>
               <h4>{<img src="./changgyu.png" />}</h4>
             </div>
@@ -30,14 +38,20 @@ function App() {
         <section className="section section02">
           <div>
             <div className="leftBox">
-              <span>test</span>
-              <p>About me</p>
-              <p>Since 1992</p>
-              <p>Various Experiences such as music & tattoos</p>
-              <p>Artistic specialized designer</p>
+              <div className="textBox">
+                <span>test</span>
+                <p>About me</p>
+                <p>Since 1992</p>
+                <p>Various Experiences such as music & tattoos</p>
+                <p>Artistic specialized designer</p>
+              </div>
+              <div className="backgroundBox">
+                <figure></figure>
+                <figure></figure>
+            </div>
             </div>
             <div className="rightBox">
-              <div>
+              <div className="listBox">
                 <ul>
                   <li>
                     <div className="leftBox">
@@ -81,103 +95,16 @@ function App() {
                       </span>
                     </div>
                   </li>
-                  {/* <li>
-                    <div className="leftBox">
-                      <p>Nisi do occaecat</p>
-                      <span>Tempor nulla nulla duis irure occaecat.</span>
-                    </div>
-                    <div className="rightBox">
-                      <p>1424</p>
-                      <span>KRW Billion</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="leftBox">
-                      <p>Nisi do occaecat</p>
-                      <span>Tempor nulla nulla duis irure occaecat.</span>
-                    </div>
-                    <div className="rightBox">
-                      <p>1424</p>
-                      <span>KRW Billion</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="leftBox">
-                      <p>Nisi do occaecat</p>
-                      <span>Tempor nulla nulla duis irure occaecat.</span>
-                    </div>
-                    <div className="rightBox">
-                      <p>1424</p>
-                      <span>KRW Billion</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="leftBox">
-                      <p>Nisi do occaecat</p>
-                      <span>Tempor nulla nulla duis irure occaecat.</span>
-                    </div>
-                    <div className="rightBox">
-                      <p>1424</p>
-                      <span>KRW Billion</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="leftBox">
-                      <p>Nisi do occaecat</p>
-                      <span>Tempor nulla nulla duis irure occaecat.</span>
-                    </div>
-                    <div className="rightBox">
-                      <p>1424</p>
-                      <span>KRW Billion</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="leftBox">
-                      <p>Nisi do occaecat</p>
-                      <span>Tempor nulla nulla duis irure occaecat.</span>
-                    </div>
-                    <div className="rightBox">
-                      <p>1424</p>
-                      <span>KRW Billion</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="leftBox">
-                      <p>Nisi do occaecat</p>
-                      <span>Tempor nulla nulla duis irure occaecat.</span>
-                    </div>
-                    <div className="rightBox">
-                      <p>1424</p>
-                      <span>KRW Billion</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="leftBox">
-                      <p>Nisi do occaecat</p>
-                      <span>Tempor nulla nulla duis irure occaecat.</span>
-                    </div>
-                    <div className="rightBox">
-                      <p>1424</p>
-                      <span>KRW Billion</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="leftBox">
-                      <p>Nisi do occaecat</p>
-                      <span>Tempor nulla nulla duis irure occaecat.</span>
-                    </div>
-                    <div className="rightBox">
-                      <p>1424</p>
-                      <span>KRW Billion</span>
-                    </div>
-                  </li> */}
                 </ul>
               </div>
+              <div className="iconBox">
+                <div className="carousel-track"></div>
+              </div>
             </div>
+
           </div>
         </section>
         <section className="section section03">
-          <div className="image-box"></div>
         </section>
       </main>
     </div>
