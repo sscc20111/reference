@@ -1,43 +1,155 @@
-h4 {margin: 0;}
-p {margin: 0;}
-span {display: block;}
+h4 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+span {
+  display: block;
+}
 .App-header {
   position: fixed;
   display: block;
   width: 100%;
   height: 80px;
-  background-color: #282c34;
+  background-color: #ffffff;
   color: white;
 }
 
+a {
+  width: 100%;
+  height: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 24px;
+}
 
-main {}
-main section {}
+.logo {
+  width: 296px;
+  height: 28px;
+}
 
-main .section01 {height: 100vh; display: flex; align-items: end;}
-main .section01 > div {}
-main .section01 > div .textBox {}
-main .section01 > div .textBox p {font-size: 30px;}
-main .section01 > div .textBox h4 {font-size: 80px;}
+a .logo > img {
+  width: 296px;
+  height: 28px;
+}
 
-main .section02 {}
-main .section02 > div {display: flex; align-items: baseline;}
-main .section02 > div > div {width: 50%;}
-main .section02 > div > .leftBox {position: sticky; top: 80px;}
-main .section02 > div > .leftBox span {font-size: 20px;}
-main .section02 > div > .leftBox p {font-size:28px;}
-main .section02 > div > .rightBox {}
-main .section02 > div > .rightBox ul {}
-main .section02 > div > .rightBox ul li {padding: 30px 0; display: flex; position: relative;justify-content: space-around; align-items: center;}
-main .section02 > div > .rightBox ul li::after {content: ''; display: block; position: absolute;top: 0;left: 0;right: 0;height: 1px; background-color: #282c34;}
-main .section02 > div > .rightBox ul li .leftBox {}
-main .section02 > div > .rightBox ul li .leftBox p {font-size: 22px;}
-main .section02 > div > .rightBox ul li .leftBox span {font-size: 18px;}
-main .section02 > div > .rightBox ul li .rightBox {display: flex; align-items: end;}
-main .section02 > div > .rightBox ul li .rightBox p {font-size: 70px;}
-main .section02 > div > .rightBox ul li .rightBox span {font-size: 22px;}
+a .nav {
+  width: 296px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  color: black;
+  font-weight: bold;
+  font-size: 17px;
+}
 
-main .section03 {}
+main {
+}
+main section {
+}
 
+main .section01 {
+  height: 100vh;
+  display: flex;
+  align-items: end;
+}
+main .section01 > div {
+}
+main .section01 > div .textBox {
+}
+main .section01 > div .textBox p {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  width: 537px;
+  height: 90px;
+}
+main .section01 > div .textBox p > div {
+  height: 45px;
+}
+main .section01 > div .textBox h4 {
+  font-size: 80px;
+}
 
+main .section02 {
+  background-image: url(tattoo&design.png);
+  height: 100vh;
+}
+main .section02 > div {
+  display: flex;
+  align-items: baseline;
+}
+main .section02 > div > div {
+  width: 50%;
+}
+main .section02 > div > .leftBox {
+  position: sticky;
+  top: 80px;
+}
+main .section02 > div > .leftBox span {
+  font-size: 20px;
+}
+main .section02 > div > .leftBox p {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+}
+main .section02 > div > .rightBox {
+}
+main .section02 > div > .rightBox ul {
+}
+main .section02 > div > .rightBox ul li {
+  padding: 30px 0;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+}
+main .section02 > div > .rightBox ul li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #ffffff;
+}
+main .section02 > div > .rightBox ul li .leftBox {
+  color: white;
+}
+main .section02 > div > .rightBox ul li .leftBox p {
+  font-size: 22px;
+  font-weight: 500;
+}
+main .section02 > div > .rightBox ul li .leftBox span {
+  font-size: 18px;
+  color: #dadada;
+}
+main .section02 > div > .rightBox ul li .rightBox {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main .section02 > div > .rightBox ul li .rightBox p {
+  font-size: 22px;
+}
+main .section02 > div > .rightBox ul li .rightBox span {
+  font-size: 22px;
+}
 
+main .section03 {
+  background-image: url(ai_03.png);
+  height: 100vh;
+}
+
+main .section03 > div > .image-box {
+  width: 210px;
+  height: 210px;
+  background-color: black;
+  display: table;
+}
