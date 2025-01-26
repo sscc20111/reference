@@ -46,20 +46,16 @@ a .nav {
   font-size: 17px;
 }
 
-main {
-}
-main section {
-}
+main {}
+main section {}
 
 main .section01 {
   height: 100vh;
   display: flex;
   align-items: end;
 }
-main .section01 > div {
-}
-main .section01 > div .textBox {
-}
+main .section01 > div {}
+main .section01 > div .textBox {}
 main .section01 > div .textBox p {
   font-size: 30px;
   font-weight: 700;
@@ -75,40 +71,69 @@ main .section01 > div .textBox h4 {
 }
 
 main .section02 {
-  background-image: url(tattoo&design.png);
-  height: 100vh;
+  /* background-image: url(tattoo&design.png);
+  height: 100vh; */
 }
 main .section02 > div {
+  position: relative;
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
 }
 main .section02 > div > div {
-  width: 50%;
 }
 main .section02 > div > .leftBox {
   position: sticky;
   top: 80px;
+  margin-bottom: 30vh;
 }
-main .section02 > div > .leftBox span {
+main .section02 > div > .leftBox .textBox {}
+main .section02 > div > .leftBox .textBox span {
   font-size: 20px;
 }
-main .section02 > div > .leftBox p {
+main .section02 > div > .leftBox .textBox p {
   font-size: 28px;
   font-weight: 700;
   color: white;
 }
-main .section02 > div > .rightBox {
+main .section02 > div > .leftBox .backgroundBox {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: -1;
 }
-main .section02 > div > .rightBox ul {
+main .section02 > div > .leftBox .backgroundBox figure {
+  position: absolute; 
+  top: 0; 
+  height: 100%; 
+  width: 100%; 
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-main .section02 > div > .rightBox ul li {
+main .section02 > div > .leftBox .backgroundBox figure:nth-child(1) {
+  background-image: url(tattoo&design.png);}
+main .section02 > div > .leftBox .backgroundBox figure:nth-child(2) {
+  background-image: url(ai_03.png);
+}
+
+main .section02 > div > .rightBox {}
+main .section02 > div > .rightBox .listBox {
+  display: flex;
+  justify-content: flex-end;
+}
+main .section02 > div > .rightBox .listBox ul {
+  width: 50%;
+}
+main .section02 > div > .rightBox .listBox ul li {
   padding: 30px 0;
   display: flex;
   position: relative;
   justify-content: space-around;
   align-items: center;
 }
-main .section02 > div > .rightBox ul li::after {
+main .section02 > div > .rightBox .listBox ul li::after {
   content: "";
   display: block;
   position: absolute;
@@ -118,38 +143,122 @@ main .section02 > div > .rightBox ul li::after {
   height: 1px;
   background-color: #ffffff;
 }
-main .section02 > div > .rightBox ul li .leftBox {
+main .section02 > div > .rightBox .listBox ul li .leftBox {
   color: white;
 }
-main .section02 > div > .rightBox ul li .leftBox p {
+main .section02 > div > .rightBox .listBox ul li .leftBox p {
   font-size: 22px;
   font-weight: 500;
 }
-main .section02 > div > .rightBox ul li .leftBox span {
+main .section02 > div > .rightBox .listBox ul li .leftBox span {
   font-size: 18px;
   color: #dadada;
 }
-main .section02 > div > .rightBox ul li .rightBox {
+main .section02 > div > .rightBox .listBox ul li .rightBox {
   color: white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-main .section02 > div > .rightBox ul li .rightBox p {
+main .section02 > div > .rightBox .listBox ul li .rightBox p {
   font-size: 22px;
 }
-main .section02 > div > .rightBox ul li .rightBox span {
+main .section02 > div > .rightBox .listBox ul li .rightBox span {
   font-size: 22px;
+}
+main .section02 > div > .rightBox > .iconBox {
+  margin-top: 60vh;
+  margin-bottom: 8vh;
 }
 
-main .section03 {
+
+
+
+/* main .section03 {
   background-image: url(ai_03.png);
   height: 100vh;
-}
+} */
 
 main .section03 > div > .image-box {
   width: 210px;
   height: 210px;
   background-color: black;
   display: table;
+}
+
+
+
+
+
+
+
+
+/*======== loop 라이브러리 css ========*/
+:root {
+  --gap-width: 20px;
+  --slide-width: 500px;
+  --slide-height: 250px;
+  --slide-bg-color: rgba(18, 92, 251, 0.52);
+  --overlay-bg-color: rgba(0, 0, 0, 0.5);
+  --overlay-text-color: #fff;
+  --overlay-transition: opacity 0.3s ease;
+  --border-radius: 20px;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: var(--gap-width);
+  animation: scroll var(--scroll-duration) linear infinite;
+}
+
+.slide {
+  background: var(--slide-bg-color);
+  flex: 0 0 var(--slide-width);
+  height: var(--slide-height);
+  border-radius: var(--border-radius);
+  position: relative;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: var(--overlay-bg-color);
+  color: var(--overlay-text-color);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: var(--overlay-transition);
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide:hover .overlay {
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--total-width)));
+  }
+}
+
+.iconBox .carousel-track:hover {
+  animation-play-state: paused;
 }
