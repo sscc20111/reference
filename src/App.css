@@ -20,7 +20,7 @@ a {
   width: 100%;
   height: 28px;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   padding: 48px 24px;
 }
@@ -36,7 +36,7 @@ a .logo > img {
 }
 
 a .nav {
-  width: 296px;
+  width: 224px;
   height: 28px;
   display: flex;
   align-items: center;
@@ -44,30 +44,41 @@ a .nav {
   color: black;
   font-weight: bold;
   font-size: 17px;
+  padding-right: 48px;
 }
 
-main {}
-main section {}
+a .nav > a {
+  text-decoration-line: none;
+}
+
+main {
+}
+main section {
+}
 
 main .section01 {
   height: 100vh;
   display: flex;
   align-items: end;
 }
-main .section01 > div {}
-main .section01 > div .textBox {}
+main .section01 > div {
+  margin: 24px;
+  margin-bottom: 48px;
+}
+main .section01 > div .textBox {
+}
 main .section01 > div .textBox p {
   font-size: 30px;
   font-weight: 700;
+  line-height: 1.5;
   margin-bottom: 2.5rem;
   width: 537px;
   height: 90px;
 }
-main .section01 > div .textBox p > div {
-  height: 45px;
-}
-main .section01 > div .textBox h4 {
-  font-size: 80px;
+
+main .section01 > div .textBox h4 > img {
+  width: 95vw;
+  height: auto;
 }
 
 main .section02 {
@@ -86,7 +97,10 @@ main .section02 > div > .leftBox {
   top: 80px;
   margin-bottom: 30vh;
 }
-main .section02 > div > .leftBox .textBox {}
+main .section02 > div > .leftBox .textBox {
+  margin-top: 40px;
+  padding-left: 24px;
+}
 main .section02 > div > .leftBox .textBox span {
   font-size: 20px;
 }
@@ -95,6 +109,14 @@ main .section02 > div > .leftBox .textBox p {
   font-weight: 700;
   color: white;
 }
+
+main .section02 > div > .leftBox .textBox .intro {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: white;
+}
+
 main .section02 > div > .leftBox .backgroundBox {
   position: absolute;
   width: 100vw;
@@ -103,22 +125,24 @@ main .section02 > div > .leftBox .backgroundBox {
   z-index: -1;
 }
 main .section02 > div > .leftBox .backgroundBox figure {
-  position: absolute; 
-  top: 0; 
-  height: 100%; 
-  width: 100%; 
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
   margin: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 main .section02 > div > .leftBox .backgroundBox figure:nth-child(1) {
-  background-image: url(tattoo&design.png);}
+  background-image: url(./assets/image/tattoo&design.png);
+}
 main .section02 > div > .leftBox .backgroundBox figure:nth-child(2) {
-  background-image: url(ai_03.png);
+  background-image: url(./assets/image/ai_03.png);
 }
 
-main .section02 > div > .rightBox {}
+main .section02 > div > .rightBox {
+}
 main .section02 > div > .rightBox .listBox {
   display: flex;
   justify-content: flex-end;
@@ -144,6 +168,7 @@ main .section02 > div > .rightBox .listBox ul li::after {
   background-color: #ffffff;
 }
 main .section02 > div > .rightBox .listBox ul li .leftBox {
+  /* width: 30%; */
   color: white;
 }
 main .section02 > div > .rightBox .listBox ul li .leftBox p {
@@ -151,28 +176,32 @@ main .section02 > div > .rightBox .listBox ul li .leftBox p {
   font-weight: 500;
 }
 main .section02 > div > .rightBox .listBox ul li .leftBox span {
-  font-size: 18px;
+  font-size: 15px;
   color: #dadada;
 }
 main .section02 > div > .rightBox .listBox ul li .rightBox {
+  width: 70%;
   color: white;
   display: flex;
+  gap: 8px;
   flex-direction: column;
   align-items: flex-start;
 }
 main .section02 > div > .rightBox .listBox ul li .rightBox p {
   font-size: 22px;
 }
+
+main .section02 > div > .rightBox .listBox ul li .rightBox #vd {
+  font-size: 25px;
+}
+
 main .section02 > div > .rightBox .listBox ul li .rightBox span {
-  font-size: 22px;
+  font-size: 25px;
 }
 main .section02 > div > .rightBox > .iconBox {
   margin-top: 60vh;
   margin-bottom: 8vh;
 }
-
-
-
 
 /* main .section03 {
   background-image: url(ai_03.png);
@@ -186,19 +215,12 @@ main .section03 > div > .image-box {
   display: table;
 }
 
-
-
-
-
-
-
-
 /*======== loop 라이브러리 css ========*/
 :root {
   --gap-width: 20px;
-  --slide-width: 500px;
-  --slide-height: 250px;
-  --slide-bg-color: rgba(18, 92, 251, 0.52);
+  --slide-width: 210px;
+  --slide-height: 210px;
+  --slide-bg-color: #a7a7a7;
   --overlay-bg-color: rgba(0, 0, 0, 0.5);
   --overlay-text-color: #fff;
   --overlay-transition: opacity 0.3s ease;
@@ -226,9 +248,10 @@ main .section03 > div > .image-box {
 }
 
 .slide img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
+  transform: translate(12%, 12%);
 }
 
 .overlay {

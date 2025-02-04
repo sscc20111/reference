@@ -1,24 +1,24 @@
-import logo from "./logo.svg";
+import logo from "./assets/image/logo.png";
 import "./App.css";
-import loop from './assets/js/loop'
+import loop from "./assets/js/loop";
 import { useEffect } from "react";
 
-
-
 function App() {
-  useEffect(()=>{
-    loop()
-  },[]);
+  useEffect(() => {
+    loop();
+  }, []);
 
   return (
     <div className="App">
       <header className="App-header">
         <a>
-          <h2 className="logo">{<img src="./changgyu.png" />}</h2>
+          <h2 className="logo">
+            <img src={logo} alt="로고" />
+          </h2>
           <div className="nav">
-            <div>Home</div>
-            <div>Work</div>
-            <div>Contact</div>
+            <a href="nav1">Home</a>
+            <a href="nav2">Work</a>
+            <a href="nav3">Contact</a>
           </div>
         </a>
       </header>
@@ -28,10 +28,14 @@ function App() {
             {/* <div className='imgBox'></div> */}
             <div className="textBox">
               <p>
-                잉크와 픽셀의 조화로 <br></br>{/* <p></p> 태그 안에 <div>태그가 있으면 안됩니다! (br로 줄넘김, ) */}
-                창의적인 디자인을 구현하는 디자이너{/* <p></p> 태그 안에 <div>태그가 있으면 안됩니다! (br로 줄넘김, ) */}
+                잉크와 픽셀의 조화로 <br></br>
+                {/* <p></p> 태그 안에 <div>태그가 있으면 안됩니다! (br로 줄넘김, ) */}
+                창의적인 디자인을 구현하는 디자이너
+                {/* <p></p> 태그 안에 <div>태그가 있으면 안됩니다! (br로 줄넘김, ) */}
               </p>
-              <h4>{<img src="./changgyu.png" />}</h4>
+              <h4>
+                <img src={logo} alt="로고" />
+              </h4>
             </div>
           </div>
         </section>
@@ -39,8 +43,7 @@ function App() {
           <div>
             <div className="leftBox">
               <div className="textBox">
-                <span>test</span>
-                <p>About me</p>
+                <div className="intro">About me</div>
                 <p>Since 1992</p>
                 <p>Various Experiences such as music & tattoos</p>
                 <p>Artistic specialized designer</p>
@@ -48,7 +51,7 @@ function App() {
               <div className="backgroundBox">
                 <figure></figure>
                 <figure></figure>
-            </div>
+              </div>
             </div>
             <div className="rightBox">
               <div className="listBox">
@@ -79,7 +82,7 @@ function App() {
                       <span>2021~2025</span>
                     </div>
                     <div className="rightBox">
-                      <p>시각디자인 산업기사</p>
+                      <p id="vd">시각디자인 산업기사</p>
                       <span>AI 프롬프트 디자이너 2급</span>
                     </div>
                   </li>
@@ -101,11 +104,9 @@ function App() {
                 <div className="carousel-track"></div>
               </div>
             </div>
-
           </div>
         </section>
-        <section className="section section03">
-        </section>
+        <section className="section section03"></section>
       </main>
     </div>
   );
