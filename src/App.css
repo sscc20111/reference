@@ -1,49 +1,5 @@
- {
-  outline: 0 !important;
-  box-sizing: border-box;
-}
-html,
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-div,
-p,
-blockquote,
-pre,
-code,
-address,
-ul,
-ol,
-li,
-menu,
-nav,
-section,
-article,
-aside,
-dl,
-dt,
-dd,
-table,
-thead,
-tbody,
-tfoot,
-label,
-caption,
-th,
-td,
-form,
-fieldset,
-legend,
-hr,
-input,
-button,
-textarea,
-object,
-figure,
+*{outline:0!important; box-sizing:border-box;}
+html,body,h1,h2,h3,h4,h5,h6,div,p,blockquote,pre,code,address,ul,ol,li,menu,nav,section,article,aside,dl,dt,dd,table,thead,tbody,tfoot,label,caption,th,td,form,fieldset,legend,hr,input,button,textarea,object,figure,
 figcaption {
   margin: 0;
   padding: 0;
@@ -132,14 +88,16 @@ img {
   width: auto;
   max-width: 100%;
 }
-/ Selection / ::-moz-selection {
+/* Selection */
+::-moz-selection {
   background: rgba(0, 0, 0, 0.5);
 }
 ::selection {
   background: rgba(0, 0, 0, 0.5);
 }
 
-/ Kakao Map / .root_daum_roughmap {
+/* Kakao Map */
+.root_daum_roughmap {
   width: 100% !important;
   border-radius: 0 !important;
   border: none !important;
@@ -149,14 +107,16 @@ img {
   display: none !important;
 }
 
-/ Fonts / .montserrat {
+/* Fonts */
+.montserrat {
   font-family: "Montserrat", sans-serif;
 }
 .thefaceshop {
   font-family: "THEFACESHOP INKLIPQUID";
 }
 
-/ input */ input::-ms-clear,
+/* input */
+input::-ms-clear,
 input::-ms-reveal {
   display: none;
   width: 0;
@@ -170,45 +130,26 @@ input::-webkit-search-results-decoration {
 }
 
 .App-header {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 80px;
-  background-color: #ffffff;
-  color: white;
+  color: white;background-color: #ffffff;  position: fixed; display: flex; align-items: center; justify-content: space-between; width: 100%; height: 80px; padding: 0 20px;
 }
 
 a {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .logo {
-  width: 296px;
-  height: 28px;
+  width: 296px; height: 28px;
 }
 
 a .logo > img {
-  width: 296px;
-  height: 28px;
+  width: 296px; height: 28px;
 }
 
-a .nav {
-  width: 224px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.App-header .nav {
+  width: 224px; height: 28px; display: flex; align-items: center; justify-content: space-between;
 }
 
-a .nav > a {
-  text-decoration-line: none;
-  color: black;
-  font-weight: bold;
-  font-size: 17px;
+.App-header .nav > a {
+  text-decoration-line: none; color: black; font-weight: bold; font-size: 17px;
 }
 
 main {
@@ -217,28 +158,19 @@ main section {
 }
 
 main .section01 {
-  height: 100vh;
-  display: flex;
-  align-items: end;
+  height: 100vh; display: flex; align-items: end;
 }
 main .section01 > div {
-  margin: 24px;
-  margin-bottom: 48px;
+  margin: 24px; margin-bottom: 48px;
 }
 main .section01 > div .textBox {
 }
 main .section01 > div .textBox p {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1.5;
-  margin-bottom: 2.5rem;
-  width: 537px;
-  height: 90px;
+  font-size: 30px; font-weight: 700; line-height: 1.5; margin-bottom: 2.5rem; width: 537px; height: 90px;
 }
 
 main .section01 > div .textBox h4 > img {
-  width: 95vw;
-  height: auto;
+  width: 95vw; height: auto;
 }
 
 main .section02 {
@@ -246,53 +178,32 @@ main .section02 {
   height: 100vh; */
 }
 main .section02 > div {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  position: relative; display: flex; flex-direction: column;
 }
 main .section02 > div > div {
 }
 main .section02 > div > .leftBox {
-  position: sticky;
-  top: 80px;
-  margin-bottom: 30vh;
+  position: sticky; top: 80px;
 }
 main .section02 > div > .leftBox .textBox {
-  margin-top: 40px;
   padding-left: 24px;
 }
 main .section02 > div > .leftBox .textBox span {
   font-size: 20px;
 }
 main .section02 > div > .leftBox .textBox p {
-  font-size: 28px;
-  font-weight: 700;
-  color: white;
+  font-size: 28px; font-weight: 700; color: white;
 }
 
 main .section02 > div > .leftBox .textBox .intro {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 16px;
-  color: white;
+  color: white; font-size: 20px; font-weight: 700; margin-bottom: 16px; 
 }
 
 main .section02 > div > .leftBox .backgroundBox {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  z-index: -1;
+  position: absolute; width: 100vw; height: 100vh; top: 0; z-index: -1;
 }
 main .section02 > div > .leftBox .backgroundBox figure {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: absolute; top: 0; height: 100%; width: 100%; margin: 0; background-size: cover; background-position: center; background-repeat: no-repeat;
 }
 main .section02 > div > .leftBox .backgroundBox figure:nth-child(1) {
   background-image: url(./assets/image/tattoo&design.png);
@@ -304,48 +215,28 @@ main .section02 > div > .leftBox .backgroundBox figure:nth-child(2) {
 main .section02 > div > .rightBox {
 }
 main .section02 > div > .rightBox .listBox {
-  display: flex;
-  justify-content: flex-end;
+  display: flex; justify-content: flex-end;
 }
 main .section02 > div > .rightBox .listBox ul {
   width: 50%;
 }
 main .section02 > div > .rightBox .listBox ul li {
-  padding: 30px 0;
-  display: flex;
-  position: relative;
-  justify-content: space-around;
-  align-items: center;
+  padding: 30px 0; display: flex; position: relative; justify-content: space-around; align-items: center;
 }
 main .section02 > div > .rightBox .listBox ul li::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: #ffffff;
+  background-color: #ffffff; content: ""; display: block; position: absolute; top: 0; left: 0; right: 0; height: 1px;
 }
 main .section02 > div > .rightBox .listBox ul li .leftBox {
-  /* width: 30%; */
-  color: white;
+  /* width: 30%; */ color: white;
 }
 main .section02 > div > .rightBox .listBox ul li .leftBox p {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 22px; font-weight: 500;
 }
 main .section02 > div > .rightBox .listBox ul li .leftBox span {
-  font-size: 15px;
-  color: #dadada;
+  font-size: 15px; color: #dadada;
 }
 main .section02 > div > .rightBox .listBox ul li .rightBox {
-  width: 70%;
-  color: white;
-  display: flex;
-  gap: 8px;
-  flex-direction: column;
-  align-items: flex-start;
+  color: white; width: 70%; display: flex; gap: 8px; flex-direction: column; align-items: flex-start;
 }
 main .section02 > div > .rightBox .listBox ul li .rightBox p {
   font-size: 22px;
@@ -359,20 +250,49 @@ main .section02 > div > .rightBox .listBox ul li .rightBox span {
   font-size: 25px;
 }
 main .section02 > div > .rightBox > .iconBox {
-  margin-top: 60vh;
-  margin-bottom: 8vh;
+  margin-top: 60vh; margin-bottom: 8vh; overflow: hidden;
 }
 
-/* main .section03 {
-  background-image: url(ai_03.png);
-  height: 100vh;
-} */
+main .section03 {
+  background-color: #000; min-width: 100vw; min-height: 100vh; display: flex; 
+}
 
-main .section03 > div > .image-box {
-  width: 210px;
-  height: 210px;
-  background-color: black;
-  display: table;
+main .section03 > div {
+  position: relative; width: 100%; display: block;
+}
+
+main .section03 > div > .leftBox {
+  position: sticky; margin-bottom: 20vh;
+}
+main .section03 > div > .leftBox .textBox {
+  line-height: 5rem ;margin-top: 880px; padding-left: 24px; color: #fff; 
+}
+
+main .section03 > div > .leftBox .textBox {
+  font-size: 1.25rem; font-weight: 700;
+}
+
+main .section03 > div > .leftBox .textBox > p {
+  font-size: 90px; font-weight: 700;
+}
+
+main .section03 > div > .leftBox .textBox > p > img {
+  width: 150px; height: 80px; margin-right: 1%; 
+}
+
+main .section03 > div > .rightBox {
+  color: #fff; font-weight: 700; font-size: 24px;
+}
+
+main .section03 > div > .rightBox .textBox {
+}
+
+main .section03 > div > .rightBox .textBox > p {
+  padding-bottom: 8px;
+}
+
+main .section03 > div > button {
+  font-size: 24px; font-weight: 700; color:#fff; background: none;
 }
 
 /*======== loop 라이브러리 css ========*/
@@ -380,7 +300,7 @@ main .section03 > div > .image-box {
   --gap-width: 20px;
   --slide-width: 210px;
   --slide-height: 210px;
-  --slide-bg-color: #a7a7a7;
+  --slide-bg-color: #a7a7a763;
   --overlay-bg-color: rgba(0, 0, 0, 0.5);
   --overlay-text-color: #fff;
   --overlay-transition: opacity 0.3s ease;
@@ -388,8 +308,7 @@ main .section03 > div > .image-box {
 }
 
 .carousel {
-  overflow: hidden;
-  width: 100%;
+  overflow: hidden; width: 100%;
 }
 
 .carousel-track {

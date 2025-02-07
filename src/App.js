@@ -1,6 +1,7 @@
 import logo from "./assets/image/logo.png";
 import "./App.css";
 import loop from "./assets/js/loop";
+import design from "./assets/image/design.png"
 import { useEffect } from "react";
 
 function App() {
@@ -15,12 +16,12 @@ function App() {
           <h2 className="logo">
             <img src={logo} alt="로고" />
           </h2>
-          <div className="nav">
-            <a href="nav1">Home</a>
-            <a href="nav2">Work</a>
-            <a href="nav3">Contact</a>
-          </div>
         </a>
+        <div className="nav">
+          <a href="nav1">Home</a>
+          <a href="nav2">Work</a>
+          <a href="nav3">Contact</a>
+        </div>
       </header>
       <main>
         <section className="section section01">
@@ -106,7 +107,26 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="section section03"></section>
+        <section className="section section03">
+        <div>
+            <div className="leftBox">
+              <div className="textBox">
+                <div>Contact</div>
+                <p>I Can Build</p>
+                <p>Something Greater,</p>
+                <p><img src={design} alt="작은이미지" />Together.</p>
+              </div>
+            </div>
+            <div className="rightBox">
+              <div className="tetxBox">
+                <p>dlckdrbn6176@gmail.com</p>
+                <p>aggie_0123</p>
+                <p>010-2816-6176</p>
+              </div>
+            </div>
+            <button>Get on Board</button>
+         </div>  
+        </section>
       </main>
     </div>
   );
