@@ -109,22 +109,20 @@ function App() {
         </section>
         <section className="section section03">
         <div>
-            <div className="leftBox">
-              <div className="textBox">
-                <div>Contact</div>
+            <div className="topBox">
+                <div className="smallText">Contact</div>
                 <p>I Can Build</p>
                 <p>Something Greater,</p>
                 <p><img src={design} alt="작은이미지" />Together.</p>
-              </div>
             </div>
-            <div className="rightBox">
+            <div className="btmBox">
               <div className="tetxBox">
-                <p>dlckdrbn6176@gmail.com</p>
+                <p>dlckdrb6176@gmail.com</p>
                 <p>aggie_0123</p>
                 <p>010-2816-6176</p>
               </div>
+                <a>Get on Board</a>
             </div>
-            <button>Get on Board</button>
          </div>  
         </section>
       </main>

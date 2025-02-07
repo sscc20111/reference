@@ -174,6 +174,7 @@ main .section01 > div .textBox h4 > img {
 }
 
 main .section02 {
+  position: relative; z-index: 1;
   /* background-image: url(tattoo&design.png);
   height: 100vh; */
 }
@@ -200,7 +201,7 @@ main .section02 > div > .leftBox .textBox .intro {
 }
 
 main .section02 > div > .leftBox .backgroundBox {
-  position: absolute; width: 100vw; height: 100vh; top: 0; z-index: -1;
+  position: absolute; width: 100vw; height: 70vh; top: 0; z-index: -1;
 }
 main .section02 > div > .leftBox .backgroundBox figure {
   position: absolute; top: 0; height: 100%; width: 100%; margin: 0; background-size: cover; background-position: center; background-repeat: no-repeat;
@@ -254,45 +255,39 @@ main .section02 > div > .rightBox > .iconBox {
 }
 
 main .section03 {
-  background-color: #000; min-width: 100vw; min-height: 100vh; display: flex; 
+  background-color: #000; min-width: 100vw; min-height: 100vh; display: flex; position: relative; z-index: 2;
 }
 
 main .section03 > div {
-  position: relative; width: 100%; display: block;
+  width: 100%; display: block;
 }
 
-main .section03 > div > .leftBox {
-  position: sticky; margin-bottom: 20vh;
-}
-main .section03 > div > .leftBox .textBox {
-  line-height: 5rem ;margin-top: 880px; padding-left: 24px; color: #fff; 
+main .section03 > div > .topBox {
+  position: sticky; margin-bottom: 20vh; line-height: 5rem ; padding-left: 24px; color: #fff; font-size: 1.25rem; font-weight: 700; font-size: 90px; font-weight: 700;
 }
 
-main .section03 > div > .leftBox .textBox {
-  font-size: 1.25rem; font-weight: 700;
+main .section03 > div .smallText {
+  font-size: 24px;
 }
 
-main .section03 > div > .leftBox .textBox > p {
-  font-size: 90px; font-weight: 700;
-}
-
-main .section03 > div > .leftBox .textBox > p > img {
+main .section03 > div > .topBox > p > img {
   width: 150px; height: 80px; margin-right: 1%; 
 }
 
-main .section03 > div > .rightBox {
-  color: #fff; font-weight: 700; font-size: 24px;
+main .section03 > div > .btmBox {
+  color: #fff; font-weight: 700; font-size: 24px; display: flex; flex-wrap: wrap; flex-direction: column; align-items: flex-start; align-content: flex-end;
 }
 
-main .section03 > div > .rightBox .textBox {
+main .section03 > div > .btmBox .textBox {
+  display: flex; flex-direction: column; align-items: flex-start;
 }
 
-main .section03 > div > .rightBox .textBox > p {
+main .section03 > div > .btmBox .textBox > p {
   padding-bottom: 8px;
 }
 
-main .section03 > div > button {
-  font-size: 24px; font-weight: 700; color:#fff; background: none;
+main .section03 > div > .btmBox > a {
+  font-size: 24px; font-weight: 700; color:#fff; background: none; border: 2px solid #fff; border-radius: 40px; padding: 20px 30px;
 }
 
 /*======== loop 라이브러리 css ========*/
