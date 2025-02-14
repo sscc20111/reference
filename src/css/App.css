@@ -130,7 +130,7 @@ input::-webkit-search-results-decoration {
 }
 
 .App-header {
-  color: white;background-color: #ffffff;  position: fixed; display: flex; align-items: center; justify-content: space-between; width: 100%; height: 80px; padding: 0 20px;
+  color: white; background-color: #ffffff; position: fixed; display: flex; align-items: center; justify-content: space-between; width: 100%; height: 80px; z-index: 1002;
 }
 
 a {
@@ -161,16 +161,22 @@ main .section01 {
   height: 100vh; display: flex; align-items: end;
 }
 main .section01 > div {
-  margin: 24px; margin-bottom: 48px;
+  width: 100%;
 }
+
 main .section01 > div .textBox {
+  width: 100%;
 }
 main .section01 > div .textBox p {
-  font-size: 30px; font-weight: 700; line-height: 1.5; margin-bottom: 2.5rem; width: 537px; height: 90px;
+  color: #000; font-size: 30px; font-weight: 700; line-height: 1.5; margin-bottom: 2.5rem; width: 537px; height: 90px;
+}
+
+main .section01 > div .textBox h4 {
+  width: 100%;
 }
 
 main .section01 > div .textBox h4 > img {
-  width: 95vw; height: auto;
+  width: 100%; height: auto;
 }
 
 main .section02 {
@@ -187,7 +193,6 @@ main .section02 > div > .leftBox {
   position: sticky; top: 80px;
 }
 main .section02 > div > .leftBox .textBox {
-  padding-left: 24px;
 }
 main .section02 > div > .leftBox .textBox span {
   font-size: 20px;
@@ -197,23 +202,29 @@ main .section02 > div > .leftBox .textBox p {
 }
 
 main .section02 > div > .leftBox .textBox .intro {
-  color: white; font-size: 20px; font-weight: 700; margin-bottom: 16px; 
+  color: white; font-size: 20px; font-weight: 700;
 }
 
 main .section02 > div > .leftBox .backgroundBox {
-  position: absolute; width: 100vw; height: 70vh; top: 0; z-index: -1;
+  position: absolute; width: 100vw; height: calc(100vh - 80px); top: 0; z-index: -1;
 }
+
+main .section02 > div > .leftBox .backgroundBox .cover{
+  /* opacity: 100%; */
+}
+
 main .section02 > div > .leftBox .backgroundBox figure {
-  position: absolute; top: 0; height: 100%; width: 100%; margin: 0; background-size: cover; background-position: center; background-repeat: no-repeat;
+  position: absolute; top: 0; height: 100%; width: 100%; margin: 0; background-size: cover; background-position: center; background-repeat: no-repeat; filter: contrast(50%);
 }
 main .section02 > div > .leftBox .backgroundBox figure:nth-child(1) {
-  background-image: url(./assets/image/tattoo&design.png);
+  background-image: url(../assets/image/tattoo&design.png);
 }
 main .section02 > div > .leftBox .backgroundBox figure:nth-child(2) {
-  background-image: url(./assets/image/ai_03.png);
+  background-image: url(../assets/image/ai_03.png);
 }
 
 main .section02 > div > .rightBox {
+  z-index: 1001; font-weight: 700;
 }
 main .section02 > div > .rightBox .listBox {
   display: flex; justify-content: flex-end;
@@ -255,38 +266,47 @@ main .section02 > div > .rightBox > .iconBox {
 }
 
 main .section03 {
-  background-color: #000; min-width: 100vw; min-height: 100vh; display: flex; position: relative; z-index: 2;
+  background-color: #000; min-width: 100vw; min-height: 100vh; display: flex; position: relative; z-index: 1003;
 }
 
 main .section03 > div {
   width: 100%; display: block;
 }
 
-main .section03 > div > .topBox {
-  position: sticky; margin-bottom: 20vh; line-height: 5rem ; padding-left: 24px; color: #fff; font-size: 1.25rem; font-weight: 700; font-size: 90px; font-weight: 700;
+main .section03 > div > div > .topBox {
+  position: sticky; margin-bottom: 20vh; line-height: 5rem ; color: #fff; font-size: 1.25rem; font-weight: 700; font-size: 90px; font-weight: 700;
 }
 
-main .section03 > div .smallText {
-  font-size: 24px;
+main .section03 > div > div .smallText {
+  font-size: 20px;
 }
 
-main .section03 > div > .topBox > p > img {
+main .section03 > div > div > .topBox > p {
+  margin-bottom: 12px;
+}
+
+main .section03 > div > div > .topBox > p > img {
   width: 150px; height: 80px; margin-right: 1%; 
 }
 
-main .section03 > div > .btmBox {
-  color: #fff; font-weight: 700; font-size: 24px; display: flex; flex-wrap: wrap; flex-direction: column; align-items: flex-start; align-content: flex-end;
+main .section03 > div > div > .btmBox {
+  color: #fff; font-weight: 700; font-size: 24px; display: flex; flex-wrap: wrap; flex-direction: column; align-items: flex-start; align-content: flex-end; 
 }
 
-main .section03 > div > .btmBox .textBox {
-  display: flex; flex-direction: column; align-items: flex-start;
+main .section03 > div > div > .btmBox .info {
+  display: flex; flex-direction: column; align-items: flex-start; padding-bottom: 24px;
 }
 
-main .section03 > div > .btmBox .textBox > p {
-  padding-bottom: 8px;
+main .section03 > div > div > .btmBox .info > p {
+  margin-bottom: 16px;
 }
 
-main .section03 > div > .btmBox > a {
+main .section03 > div > div > .btmBox .info > p >img {
+  width: 30px; height: 30px; margin-right: 16px;
+}
+
+
+main .section03 > div > div > .btmBox > a {
   font-size: 24px; font-weight: 700; color:#fff; background: none; border: 2px solid #fff; border-radius: 40px; padding: 20px 30px;
 }
 
@@ -326,6 +346,12 @@ main .section03 > div > .btmBox > a {
   height: 80%;
   object-fit: cover;
   transform: translate(12%, 12%);
+}
+
+.slide:hover {
+  transform:  scale(1.3);
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
 }
 
 .overlay {

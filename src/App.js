@@ -1,7 +1,12 @@
 import logo from "./assets/image/logo.png";
-import "./App.css";
+import "./css/App.css";
+import "./css/common.css"
+import "./css/sub.css"
 import loop from "./assets/js/loop";
 import design from "./assets/image/design.png"
+import mail from "./assets/image/mail.png"
+import insta from "./assets/image/Insta.png"
+import call from "./assets/image/call.png"
 import { useEffect } from "react";
 
 function App() {
@@ -14,7 +19,7 @@ function App() {
       <header className="App-header">
         <a>
           <h2 className="logo">
-            <img src={logo} alt="로고" />
+            <img src={logo} alt="로고"/>
           </h2>
         </a>
         <div className="nav">
@@ -25,6 +30,7 @@ function App() {
       </header>
       <main>
         <section className="section section01">
+          <div className="inner">
           <div>
             {/* <div className='imgBox'></div> */}
             <div className="textBox">
@@ -39,10 +45,12 @@ function App() {
               </h4>
             </div>
           </div>
+          </div>
         </section>
         <section className="section section02">
           <div>
             <div className="leftBox">
+            <div className="inner">
               <div className="textBox">
                 <div className="intro">About me</div>
                 <p>Since 1992</p>
@@ -50,11 +58,15 @@ function App() {
                 <p>Artistic specialized designer</p>
               </div>
               <div className="backgroundBox">
+                <div className="cover">
                 <figure></figure>
                 <figure></figure>
+                </div>
+              </div>
               </div>
             </div>
             <div className="rightBox">
+            <div className="inner">
               <div className="listBox">
                 <ul>
                   <li>
@@ -100,6 +112,7 @@ function App() {
                     </div>
                   </li>
                 </ul>
+                </div>
               </div>
               <div className="iconBox">
                 <div className="carousel-track"></div>
@@ -108,6 +121,7 @@ function App() {
           </div>
         </section>
         <section className="section section03">
+        <div className="inner">
         <div>
             <div className="topBox">
                 <div className="smallText">Contact</div>
@@ -116,13 +130,14 @@ function App() {
                 <p><img src={design} alt="작은이미지" />Together.</p>
             </div>
             <div className="btmBox">
-              <div className="tetxBox">
-                <p>dlckdrb6176@gmail.com</p>
-                <p>aggie_0123</p>
-                <p>010-2816-6176</p>
+              <div className="info">
+                <p><img src={mail} alt="icon" />dlckdrb6176@gmail.com</p>
+                <p><img src={insta} alt="icon" />aggie_0123</p>
+                <p><img src={call} alt="icon" />010-2816-6176</p>
               </div>
-                <a>Get on Board</a>
+                <a href="Board">Get on Board</a>
             </div>
+         </div>
          </div>  
         </section>
       </main>
