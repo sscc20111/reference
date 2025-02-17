@@ -40,7 +40,7 @@ function App() {
       <header className="App-header">
         <a>
           <h2 className="logo">
-            <img src={logo} alt="로고"/>
+            <img src={logo} alt="로고" />
           </h2>
         </a>
         <div className="nav">
@@ -148,7 +148,7 @@ function App() {
                 <div className="smalltxt">Contact</div>
                 <p>I Can Build</p>
                 <p>Something Greater,</p>
-                <p className="box"><img src={design} alt="작은이미지" />Together.</p>
+                <p className="box test"><img src={design} alt="작은이미지" />Together.</p>
             </div>
             <div className="btmBox">
               <div className="info">

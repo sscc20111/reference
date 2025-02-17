@@ -279,10 +279,10 @@ main .section03 > div > div > .topBox {
 }
 
 main .section03 > div > div > .topBox > .smalltxt {
-  font-size: 20px; position: relative; overflow:hidden; animation: fadein 3s ease-in-out;
+  font-size: 20px; position: relative; overflow: hidden; animation: fadein 3s ease-in-out;
 } 
 
-@keyframes smalltxt {
+@keyframes fadein {
   from {opacity: 0;}
   to {opacity: 1;}
 }
@@ -292,7 +292,7 @@ main .section03 > div > div > .topBox > .smalltxt {
   transition: opacity 2s ease-in-out; /* 부드러운 전환 효과 */
 }
 
-.box >img {
+.box.test >img {
   opacity: 1; /* test 클래스 추가 시 보이게 */
 }
 
