@@ -9,10 +9,31 @@ import insta from "./assets/image/Insta.png"
 import call from "./assets/image/call.png"
 import { useEffect } from "react";
 
+
+import { gsap } from "gsap";
+    
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+
 function App() {
   useEffect(() => {
     loop();
+    test()
   }, []);
+  const test = () => {
+    console.log('test');
+    gsap.to('.box', {
+      scrollTrigger: {
+        trigger: ".box", // 스크롤 트리거 대상
+        // pin: true,
+        start: "top center",   // 트리거가 화면의 80% 지점에 도달했을 때
+        toggleClass: "test" // test 클래스 추가/제거
+      }
+  });
+  }
 
   return (
     <div className="App">
@@ -124,10 +145,10 @@ function App() {
         <div className="inner">
         <div>
             <div className="topBox">
-                <div className="smallText">Contact</div>
+                <div className="smalltxt">Contact</div>
                 <p>I Can Build</p>
                 <p>Something Greater,</p>
-                <p><img src={design} alt="작은이미지" />Together.</p>
+                <p className="box"><img src={design} alt="작은이미지" />Together.</p>
             </div>
             <div className="btmBox">
               <div className="info">

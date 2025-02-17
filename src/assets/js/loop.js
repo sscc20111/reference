@@ -18,7 +18,6 @@ const loop = () => {
     { src: img7, description: "Description 7" },
     { src: img8, description: "Description 8" },
   ];
-  console.log("test");
 
   const carouselTrack = document.querySelector(".carousel-track");
 
