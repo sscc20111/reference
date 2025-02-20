@@ -9,7 +9,7 @@ import img8 from "./img/react.png";
 
 const loop = () => {
   const slidesData = [
-    { src: img1, description: "Description 1" },
+    { src: img1, description: "html" },
     { src: img2, description: "Description 2" },
     { src: img3, description: "Description 3" },
     { src: img4, description: "Description 4" },
@@ -71,4 +71,4 @@ const loop = () => {
   populateCarouselTrack(slidesData);
 };
 
-export default loop;
+export {loop};
