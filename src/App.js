@@ -29,24 +29,17 @@ function App() {
     gsap.timeline({ //background 따라오기 기능
       scrollTrigger: {
           trigger: '.section02',
-          markers: true,
+          // markers: true,
           start: "top 80",
           end: "bottom bottom",
           pin: '.gsap_pin',
       }
     });
-    gsap.timeline({ //background 따라오기 기능
-      scrollTrigger: {
-          trigger: '.section02',
-          markers: true,
-          start: "top 60",
-          end: "80% bottom",
-      }
-    });
+
     gsap.timeline({ //background animation 기능
         scrollTrigger: {
             trigger: '.section02',
-            markers: true,
+            // markers: true,
             start: "top +=80%",
             end: "bottom center",
             onUpdate: self => {
@@ -61,47 +54,26 @@ function App() {
                 }
                 
                 if(self.progress >= 0.6){
-                  const opacityProgress = Math.min((self.progress - 0.6) * 6, 1);//50% 진행후 실행
+                  const opacityProgress = Math.min((self.progress - 0.6) * 6, 1);//60% 진행후 실행
                   document.documentElement.style.setProperty('--fadeOut', `${opacityProgress}`);
 
                 }
             }
         }
     });
+
+
+
     gsap.timeline({ //background 따라오기 기능
       scrollTrigger: {
-          trigger: '.section03 .smalltxt',
-          markers: true,
-          start: "top 80",
-          end: "bottom bottom",
-          pin: '.gsap_pin',
+        trigger: '.section03 .topBox',
+        // markers: true,
+        start: "top center",
+        end: "bottom center",
+        onEnter: () => document.querySelector('.section03 .topBox').classList.add('active'),
       }
     });
-    gsap.timeline({ //'contact' animation 기능
-        scrollTrigger: {
-            trigger: '.section03 .samlltxt',
-            markers: true,
-            start: "top 80",
-            end: "top 30",
-            // onUpdate: self => {
-            //     const paddingProgress = Math.min(self.progress, 0.1) * (64 / 0.1);// 0 ~ 0.1값을 0 ~ 64px(inner padding)로 변환
-            //     document.documentElement.style.setProperty('--padding', `${paddingProgress}px`);
-                
-            //     if(self.progress >= 0.1){ //padding 모션이 끝난시점 0.1
-            //       const opacityProgress = Math.min((self.progress - 0.1) * 5, 0.6);// Math.min
-            //       const scaleProgress = Math.min((self.progress - 0.1), 0.05);// padding 모션이 끝난후 opacity 시작 (0.05 => 임계값)
-            //       document.documentElement.style.setProperty('--cover_opacity', `${opacityProgress}`);
-            //       document.documentElement.style.setProperty('--scale', `${scaleProgress+1}`);
-            //     }
-                
-            //     if(self.progress >= 0.6){
-            //       const opacityProgress = Math.min((self.progress - 0.6) * 6, 1);//50% 진행후 실행
-            //       document.documentElement.style.setProperty('--fadeOut', `${opacityProgress}`);
 
-            //     }
-            // }
-        }
-    });
 }
 
 
@@ -115,9 +87,9 @@ function App() {
           </h2>
         </a>
         <div className="nav">
-          <a href="nav1">Home</a>
-          <a href="nav2">Work</a>
-          <a href="nav3">Contact</a>
+            <a href="nav1">Home</a>
+            <a href="nav2">Work</a>
+            <a href="nav3">Contact</a>
         </div>
       </header>
     {/*  <==============### header 끝 ###==============>  */}
@@ -208,9 +180,9 @@ function App() {
           <div className="inner">
             <div className="topBox">
                 <div className="smalltxt">Contact</div>
-                <p>I Can Build</p>
-                <p>Something Greater,</p>
-                <p className="box"><img src={design} alt="작은이미지" />Together.</p>
+                <p><span>I Can Build</span></p>
+                <p><span>Something Greater,</span></p>
+                <p className="box"><span><img src={design} alt="작은이미지" />Together.</span></p>
             </div>
             <div className="btmBox">
               <div className="info">

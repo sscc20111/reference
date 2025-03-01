@@ -86,19 +86,49 @@ input::-webkit-search-decoration,input::-webkit-search-cancel-button,input::-web
 /*======== main section03 ========*/
 .main .section03 {background-color: #000; min-width: 100vw; min-height: 100vh; display: flex; position: relative;}
 .main .section03 .topBox {position: sticky; margin-bottom: 20vh; line-height: 5rem ; color: #fff; font-size: 1.25rem; font-weight: 700; font-size: 90px; font-weight: 700; animation: fadein 2s ease-in-out;}
-@keyframes fadein {from{opacity: 0;} to{opacity: 1;}}
-.main .section03 .smalltxt {font-size: 20px;animation: fadeout 1s ease-in-out;animation-duration: 1s;}
-@keyframes fadeout {from{font-size: 80px;} to{font-size: 20px;}}
-.main .section03 .topBox p {margin-bottom: 16px;}
-.main .section03 .topBox p img {width: 150px; height: 80px; margin-right: 1%;animation:slide-in-blurred-left 2s cubic-bezier(.23,1.000,.32,1.000) both}
-@keyframes slide-in-blurred-left{0%{transform:translateX(-1000px) scaleX(2.5) scaleY(.2);transform-origin:100% 50%;filter:blur(40px);opacity:0}100%{transform:translateX(0) scaleY(1) scaleX(1);transform-origin:50% 50%;filter:blur(0);opacity:1}}
+.main .section03 .topBox .smalltxt {font-size: 80px; transition: all 0.5s ease-in-out;}
+.main .section03 .topBox p {margin-top: -27px; line-height: 1.4; overflow: hidden;}
+.main .section03 .topBox p span {display: block; transform: translateY(120%); transition: all 0.5s ease-in-out;}
+.main .section03 .topBox p img {width: 0px; margin-right: 1%; transition: all 0.5s ease-in-out;}
 .main .section03 .btmBox {color: #fff; font-weight: 700; font-size: 24px; display: flex; flex-wrap: wrap; flex-direction: column; align-items: flex-start; align-content: flex-end;}
 .main .section03 .btmBox .info {display: flex; flex-direction: column; align-items: flex-start; padding-bottom: 24px;}
 .main .section03 .btmBox .info p {margin-bottom: 16px;}
 .main .section03 .btmBox .info p img {width: 30px; height: 30px; margin-right: 16px;}
 .main .section03 .btmBox a {font-size: 24px; font-weight: 700; color:#fff; background: none; border: 2px solid #fff; border-radius: 40px; padding: 20px 30px;}
+.main .section03 .btmBox a::before {background-color: #fff; transition: 0.3 ease-out;}
+.main .section03 .btmBox a:hover {background-color:#fff; color:#000; transition: 0.2s 0.1s;}
+
+.main .section03 .topBox.active .smalltxt {font-size: 20px;}
+.main .section03 .topBox.active p span {transform: translateY(0);}
+.main .section03 .topBox.active p:nth-child(2) span {transition-delay: 0.5s;}
+.main .section03 .topBox.active p:nth-child(3) span {transition-delay: 0.6s;}
+.main .section03 .topBox.active p:nth-child(4) span {transition-delay: 0.8s;}
+.main .section03 .topBox.active p img {width: 150px; transition-delay: 1.2s;}
 
 
+
+/* @keyframes fadein {
+  from{opacity: 0;} 
+  to{opacity: 1;}
+}
+@keyframes fadeout {
+  from{font-size: 80px;} 
+  to{font-size: 20px;}
+} */
+/* @keyframes slide-in-blurred-left{
+  0%{
+    transform:translateX(-1000px) scaleX(2.5) scaleY(.2);
+    transform-origin:100% 50%;
+    filter:blur(40px);
+    opacity:0
+  }
+  100%{
+    transform:translateX(0) scaleY(1) scaleX(1);
+    transform-origin:50% 50%;
+    filter:blur(0);
+    opacity:1;
+  }
+} */
 
 
 
@@ -119,12 +149,12 @@ input::-webkit-search-decoration,input::-webkit-search-cancel-button,input::-web
 .slide img {width: 70%;height: 70%;object-fit: contain;transform: none; /* 기존 transform 제거 */}
 /* .slide {background: var(--slide-bg-color);flex: 0 0 var(--slide-width);height: var(--slide-height);border-radius: var(--border-radius);position: relative;overflow: hidden;}
 .slide img {width: 70%;height: 70%;object-fit: cover;transform: translate(-12%, -12%);} */
-.slide:hover {transform:  scale(1.3);-webkit-transform: scale(1.3);-ms-transform: scale(1.3);transition-duration: 1s;}
+/* .slide:hover {transform:  scale(1.3);-webkit-transform: scale(1.3);-ms-transform: scale(1.3);transition-duration: 1s;} */
 .overlay {position: absolute;bottom: 0;background: var(--overlay-bg-color);color: var(--overlay-text-color);width: 100%;height: 100%;opacity: 0;transition: var(--overlay-transition);border-radius: var(--border-radius);display: flex;justify-content: center;align-items: center;}
-.slide:hover .overlay {opacity: 1;}
+/* .slide:hover .overlay {opacity: 1;} */
 
 @keyframes scroll {0% {  transform: translateX(0);}
   100% {  transform: translateX(calc(-1 * var(--total-width)));}
 }
 
-.carousel-track:hover {animation-play-state: paused;}
+/* .carousel-track:hover {animation-play-state: paused;} */
