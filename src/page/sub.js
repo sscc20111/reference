@@ -1,8 +1,19 @@
+import Header from "../assets/components/header";
+
 const Sub = () => {
 
-    return(
+    return(<>
+        <Header></Header>
         <div>SubPage</div>
-    )
+        <div>SubPage</div>
+        <div>SubPage</div>
+        <div>SubPage</div>
+        <div>SubPage</div>
+        <div>SubPage</div>
+        <div>SubPage</div>
+        <div>SubPage</div>
+        <div>SubPage</div>
+    </>)
 
 };
 

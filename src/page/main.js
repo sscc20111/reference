@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
 
+import Header from "../assets/components/header";
 import {loop} from "../assets/js/loop";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -76,18 +77,7 @@ function Main() {
   return (
     <div className="Main">
     {/*  <==============### header 시작 ###==============>  */}
-      <header className="header">
-        <a>
-          <h2 className="logo">
-            <img src={logo} alt="로고"/>
-          </h2>
-        </a>
-        <div className="nav">
-            <a href="nav1">Home</a>
-            <a href="#Sub">Work</a>
-            <a href="nav3">Contact</a>
-        </div>
-      </header>
+    <Header></Header>
     {/*  <==============### header 끝 ###==============>  */}
 
 
