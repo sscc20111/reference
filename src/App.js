@@ -8,7 +8,7 @@ import "./css/App.css";
 import "./css/common.css"
 import "./css/sub.css"
 
-import logo from "./assets/image/logo.png";
+import logo from "./assets/image/logo.svg";
 import design from "./assets/image/design.png"
 import mail from "./assets/image/mail.png"
 import insta from "./assets/image/Insta.png"
@@ -132,7 +132,7 @@ function App() {
                 <li>
                   <div className="leftBox">
                     <p>경력</p>
-                    <span>2022~2025</span>
+                    <span>2023~2025</span>
                   </div>
                   <div className="rightBox">
                     <p>코드크래프트 디자인팀</p>
