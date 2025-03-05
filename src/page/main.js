@@ -75,11 +75,8 @@ function Main() {
 
 
   return (
-    <div className="Main">
-    {/*  <==============### header 시작 ###==============>  */}
+    <div className="MainWrap">
     <Header></Header>
-    {/*  <==============### header 끝 ###==============>  */}
-
 
 
     {/*  <==============### main 시작 ###==============>  */}

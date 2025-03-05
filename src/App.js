@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import Main from "./page/main";
 import Sub from "./page/sub";
+import Detail from "./page/detail";
 
 import "./css/App.css";
 import "./css/common.css"
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="sub" element={<Sub />} />
+        <Route path="detail" element={<Detail />} />
       </Routes>
     </div>
   );
