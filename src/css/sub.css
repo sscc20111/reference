@@ -1,18 +1,34 @@
+/*============== work 페이지 메인 ==============*/
 .SubWrap {padding-top: 80px;}
 .SubWrap .sub {}
 .SubWrap .sub .item {}
-.SubWrap .sub .item .listHeader {}
-.SubWrap .sub .item .listHeader h4 {font-size: 1.8em; font-weight: 600; width: calc(33.3333333333% - 0.6666666667 * 0.5em); border-top: solid #D9D9D9 2px;}
+.SubWrap .sub .item .listHeader {padding: 0 32px; padding-top: 80px;}
+.SubWrap .sub .item .listHeader h4 {font-size: 1.8em; font-weight: 600; color: #000; width: calc(33.3333333333% - 0.6666666667 * 0.5em); border-top: solid #D9D9D9 2px;}
 .SubWrap .sub .item .listHeader ul {display: flex; flex-wrap: wrap; gap: 0.5em; padding-top: 40px;}
-.SubWrap .sub .item .listHeader ul li {width: calc(33.3333333333% - 0.6666666667 * 0.5em); filter: grayscale(1); transition: all 0.3s;  width: 370px; height: 420px;}
+.SubWrap .sub .item .listHeader ul li {width: calc(33.3333333333% - 0.6666666667 * 0.5em); filter: grayscale(1); transition: all 0.3s; padding-bottom: 20px;}
 .SubWrap .sub .item .listHeader ul li:hover {filter: grayscale(0);}
 .SubWrap .sub .item .listHeader ul li img {}
+
+/* .SubWrap .sub .item02 .listHeader ul li {display: flex; flex-wrap: wrap; gap: 0.5em;} */
 
 .SubWrap .sub .item03 .listHeader ul li {width: calc(33.3333333333% - 0.6666666667 * 0.5em); filter: grayscale(1); transition: all 0.3s;  width: 370px; height: 420px;}
 
 
-
+/*============== work 페이지 상세 ==============*/
 
 
 .DetailWrap {padding-top: 80px;}
-.DetailWrap .detail {}
+.DetailWrap .intro {padding: 0 32px; padding-top: 80px; display: flex; justify-content: center; flex-direction: column; align-items: center; gap: 1rem;}
+.DetailWrap .intro div {font-size: 24px; font-weight: 600;}
+.DetailWrap .intro h2 {font-size: 40px; font-weight: 800; color: #000;}
+.DetailWrap .intro hr {display: block; border-top: 1px solid #D9D9D9; width: 100%; height: 1px;}
+
+.DetailWrap .detail {padding: 0 32px; padding-top: 80px; display: flex; justify-content: space-around;}
+.DetailWrap .detail .leftbox {width: 600px; height: 1501px;}
+.DetailWrap .detail .rightbox { width: 500px; height: auto;}
+.DetailWrap .detail .rightbox ul {}
+.DetailWrap .detail .rightbox ul li {font-size: 24px; font-weight: 700; color: #000; padding-top: 20px; display: flex; flex-direction: column;}
+.DetailWrap .detail .rightbox ul li a {padding-top: 20px;}
+.DetailWrap .detail .rightbox ul li a:nth-child(2) {font-size: 20px; font-weight: 300;}
+.DetailWrap .detail .rightbox ul li a:nth-child(3) {font-size: 20px; font-weight: 300;}
+.DetailWrap .detail .rightbox ul .link {font-weight: 300; text-decoration: underline; text-underline-offset: 6px;}
