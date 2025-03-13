@@ -27,9 +27,9 @@
 .DetailWrap .detail .leftbox {width: 600px; height: 1501px;}
 .DetailWrap .detail .rightbox { width: 500px; height: auto;}
 .DetailWrap .detail .rightbox ul {}
-.DetailWrap .detail .rightbox ul li {font-size: 24px; font-weight: 700; color: #000; padding-top: 20px; display: flex; flex-direction: column;}
-.DetailWrap .detail .rightbox ul li a {padding-top: 20px;}
-.DetailWrap .detail .rightbox ul li a:nth-child(2) {font-size: 20px; font-weight: 300;}
-.DetailWrap .detail .rightbox ul li a:nth-child(3) {font-size: 20px; font-weight: 300;}
-.DetailWrap .detail .rightbox ul .link a {font-weight: 700; text-decoration: none;}
-.DetailWrap .detail .rightbox ul .link a:nth-child(2) {font-weight: 300; text-decoration: underline; text-underline-offset: 6px;}
+.DetailWrap .detail .rightbox ul li {padding-top: 20px;}
+.DetailWrap .detail .rightbox ul li h3 {font-size: 24px; font-weight: 700; color: #000; padding-top: 20px; display: flex; flex-direction: column;}
+.DetailWrap .detail .rightbox ul li p {font-size: 20px; font-weight: 400; padding-top: 16px; color: #3f3f3f;}
+/* .DetailWrap .detail .rightbox ul li a:nth-child(2) {font-size: 20px; font-weight: 300;}
+.DetailWrap .detail .rightbox ul li a:nth-child(3) {font-size: 20px; font-weight: 300;} */
+.DetailWrap .detail .rightbox ul .link a {font-size: 20px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px;}
