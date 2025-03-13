@@ -1,39 +1,39 @@
 import Header from "../assets/components/header";
-import year from "../assets/image/year.png"
-
+import { useLocation } from 'react-router-dom'
+import { getProjectsDitailData } from "../assets/js/projects_data";
 const Detail = () => {
+    const location = useLocation();
+    const test1 = location.state.title;
 
     return(<>
     <Header></Header>
     <div className="DetailWrap">
         <div className="intro">
             <div>sello</div>
-            <h2>2주년 이벤트</h2>
+            <h2>{getProjectsDitailData(test1).title}</h2>
             <hr />
         </div>
         <div className="detail">
             <div className="leftbox">
-                <img src={year}></img>
+                <img src={getProjectsDitailData(test1).src}></img>
             </div>
             <div className="rightbox">
                 <ul>
-                    <li>셀로 2주년을 기념하여
-                        특별한 이벤트 참여를 유도하기 위해
-                        생일파티에 초대받는 컨셉의 메인 그래픽
-                        디자인을 작업하였다.
+                    <li>
+                        <p>{getProjectsDitailData(test1).text1}</p>
                     </li>
                     <li>
-                        <a>WORK SCOPE</a>
-                        <a>상세페이지 디자인</a>
+                        <h3>WORK SCOPE</h3>
+                        <p>{getProjectsDitailData(test1).text2}</p>
                     </li>
                     <li>
-                        <a>Tool</a>
-                        <a>Photoshop</a>
-                        <a>Illustration</a>
+                        <h3>Tool</h3>
+                        {getProjectsDitailData(test1).text3.map((item, index) => (
+                            <p key={index}>{item}</p>
+                        ))}
                     </li>
                     <li className="link">
-                        <a>Link</a>
-                        <a href="https://sell-o.kr/events/2anniversary">https://sell-o.kr/events/2anniversary</a>    
+                        <a href={getProjectsDitailData(test1).link}>링크</a>    
                     </li>
                 </ul>
             </div>

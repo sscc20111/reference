@@ -19,6 +19,7 @@ function Main() {
   useEffect(() => {
     loop();
     animation();
+    return () =>  ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
   }, []);
 
   const animation = () => {
