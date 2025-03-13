@@ -23,13 +23,14 @@
 .DetailWrap .intro h2 {padding-bottom: 16px; font-size: 40px; font-weight: 800; color: #000;}
 .DetailWrap .intro hr {display: block; border-top: 2px solid #D9D9D9; width: 100%; height: 1px;}
 
-.DetailWrap .detail {padding: 0 32px; padding-top: 80px; display: flex; justify-content: space-around;}
-.DetailWrap .detail .leftbox {width: 600px; height: 1501px;}
+.DetailWrap .detail {padding: 0 32px; padding-top: 80px; gap: 24px; display: flex; justify-content: space-around;}
+.DetailWrap .detail .leftbox {width: 600px;}
 .DetailWrap .detail .rightbox { width: 500px; height: auto;}
 .DetailWrap .detail .rightbox ul {}
 .DetailWrap .detail .rightbox ul li {padding-top: 20px;}
+.DetailWrap .detail .rightbox ul li .explain {font-size: 24px; font-weight: 700;}
 .DetailWrap .detail .rightbox ul li h3 {font-size: 24px; font-weight: 700; color: #000; padding-top: 20px; display: flex; flex-direction: column;}
-.DetailWrap .detail .rightbox ul li p {font-size: 20px; font-weight: 400; padding-top: 16px; color: #3f3f3f;}
+.DetailWrap .detail .rightbox ul li p {font-size: 20px; font-weight: 400; padding-top: 16px; color: #2b2b2b;}
 /* .DetailWrap .detail .rightbox ul li a:nth-child(2) {font-size: 20px; font-weight: 300;}
 .DetailWrap .detail .rightbox ul li a:nth-child(3) {font-size: 20px; font-weight: 300;} */
 .DetailWrap .detail .rightbox ul .link a {font-size: 20px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px;}

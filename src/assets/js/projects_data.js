@@ -24,7 +24,7 @@ const getProjectsDitailData = (project) => {
                 text1:`매 달 진행되는 추천인 이벤트를 리뉴얼하여 더욱 풍성한 경품을 제공하고자 하였다. 이에 따라 메인 그래픽 디자인을 작업하였다.`,
                 text2:'상세페이지 디자인',
                 text3:['Photoshop','Illustration'],
-                src: require('../image/recomment.png'),
+                src: require('../image/recomment_02.png'),
                 link:'https://sell-o.kr/events/recommend_2025'
             }
         case 'item4':
@@ -130,10 +130,43 @@ const getProjectsDitailData = (project) => {
             case 'item16':
             return {
                 title: '갤럭시 Z5 (유튜브 썸네일)',
-                text1:`갤럭시 Z5 출시를 기념하여 '셀로' 공식 유튜브 영상에 들어갈 썸네일 그래픽 디자인을 작업하였다.`,
+                text1:`갤럭시 Z5 출시를 기념하여 '셀로' 공식 유튜브 영상에 들어갈 썸네일 디자인을 작업하였다.`,
                 text2:'썸네일 디자인',
                 text3:['Photoshop','Illustration'],
                 src: require('../image/thumnail_z5.png'),
+            }
+            case 'item17':
+            return {
+                title: '부끄이벤트 (유튜브 썸네일)',
+                text1:`부끄와의 협업 이벤트를 기념하여 '셀로' 공식 유튜브 영상에 들어갈 썸네일 디자인을 작업하였다.`,
+                text2:'썸네일 디자인',
+                text3:['Photoshop','Illustration'],
+                src: require('../image/thumnail_dog.png'),
+            }
+            case 'item18':
+            return {
+                title: '갤럭시 Z5 (가격표)',
+                text1:`갤럭시 Z5 출시를 기념하여 진행한 이벤트에서 갤럭시 모델별 판매 금액을 알려주는 가격표 디자인을 작업하였다.`,
+                text2:'썸네일 디자인',
+                text3:['Photoshop','Illustration'],
+                src: require('../image/z5_price_02.png'),
+            }
+            case 'item19':
+            return {
+                title: '부끄이벤트(인스타)',
+                text1:`부끄와의 협업 이벤트 홍보를 위한 인스타 피드 디자인을 작업하였다.`,
+                text2:'인스타 피드 디자인',
+                text3:['Photoshop','Illustration'],
+                src: require('../image/booqoo_insta.png'),
+            }
+            case 'item20':
+            return {
+                title: 'UI UX(셀로 기업 전용 서비스)',
+                text1:`셀로의 홈페이지에 '기업 전용 서비스'를 새로 추가하기 위하여 UI/UX 디자인을 작업하였다.`,
+                text2:'UI/UX 디자인',
+                text3:['Photoshop','Illustration','Figma'],
+                src: require('../image/uiux_02.png'),
+                link: 'https://sell-o.kr/companyService'
             }
 
 }

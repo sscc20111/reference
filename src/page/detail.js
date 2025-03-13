@@ -21,7 +21,7 @@ const Detail = () => {
             <div className="rightbox">
                 <ul>
                     <li>
-                        <p>{getProjectsDitailData(test1).text1}</p>
+                        <p className="explain">{getProjectsDitailData(test1).text1}</p>
                     </li>
                     <li>
                         <h3>WORK SCOPE</h3>

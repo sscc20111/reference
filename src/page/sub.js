@@ -15,7 +15,7 @@ const Sub = () => {
                     <ul>
                         {getProjectsSubData.Detail.map((item, index) => (
                             <li key={index}>
-                                <p>{item.title}</p>
+                                {/* <p>{item.title}</p> */}
                                 <Link to={`/detail`} state={{title: item.title}} >
                                     <img src={item.src}></img>
                                 </Link>
@@ -30,9 +30,9 @@ const Sub = () => {
                     <ul>
                         {getProjectsSubData.etc.map((item, index) => (
                             <li key={index}>
-                                <a href="#detail">
+                                <Link to={`/detail`} state={{title: item.title}} >
                                     <img src={item.src}></img>
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
@@ -44,9 +44,9 @@ const Sub = () => {
                     <ul>
                         {getProjectsSubData.UIUX.map((item, index) => (
                             <li key={index}>
-                                <a href="#detail">
+                                <Link to={`/detail`} state={{title: item.title}} >
                                     <img src={item.src}></img>
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>

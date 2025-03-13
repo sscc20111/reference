@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";    
 import logo from "../../assets/image/logo.svg";
+import { useLocation } from "react-router-dom";
+import ScrollHandler from "../js/ScrollHandler";
 
 
 
@@ -6,15 +9,19 @@ const Header = () => {
 
     return(
         <header className="header">
-            <a>
+            <Link to="/">
                 <h2 className="logo">
                     <img src={logo} alt="로고"/>
                 </h2>
-            </a>
+            </Link>
             <div className="nav">
-                <a href="/">Home</a>
-                <a href="#sub">Work</a>
-                <a href="/">Contact</a>
+                <Link to="/">Home</Link>
+                <Link to="/sub">Work</Link>
+                <Link to="/#contact"
+                      onClilck={() => ScrollHandler('contact')}
+                >      
+                      Contact
+                </Link>
             </div>
         </header>
     )
