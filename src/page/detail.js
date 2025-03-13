@@ -32,6 +32,7 @@ const Detail = () => {
                         <a>Illustration</a>
                     </li>
                     <li className="link">
+                        <a>Link</a>
                         <a href="https://sell-o.kr/events/2anniversary">https://sell-o.kr/events/2anniversary</a>    
                     </li>
                 </ul>
