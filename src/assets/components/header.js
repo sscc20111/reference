@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";    
 import logo from "../../assets/image/logo.svg";
-import { useLocation } from "react-router-dom";
-import ScrollHandler from "../js/ScrollHandler";
 
 
 
 const Header = () => {
+    const handleScroll = () => {
+        setTimeout(() => {
+            if (window.myElementRef?.current) {
+                window.myElementRef.current.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                console.error('React 요소에 접근할 수 없습니다.');
+            }
+        }, 10);
+    };
 
     return(
         <header className="header">
@@ -17,11 +24,7 @@ const Header = () => {
             <div className="nav">
                 <Link to="/">Home</Link>
                 <Link to="/sub">Work</Link>
-                <Link to="/#contact"
-                      onClilck={() => ScrollHandler('contact')}
-                >      
-                      Contact
-                </Link>
+                <Link to="/" onClick={handleScroll}>Contact</Link>
             </div>
         </header>
     )

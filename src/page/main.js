@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef  } from "react";
 import { gsap } from "gsap";
 
 import Header from "../assets/components/header";
@@ -16,9 +16,12 @@ import backgroundImg2 from "../assets/image/ai_03.png"
 
 gsap.registerPlugin(ScrollTrigger);
 function Main() {
+  const elementRef = useRef(null);
+
   useEffect(() => {
     loop();
     animation();
+    window.myElementRef = elementRef;
     return () =>  ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
   }, []);
 
@@ -160,7 +163,7 @@ function Main() {
           </div>
         </section>
 
-        <section className="section section03">
+        <section className="section section03" ref={elementRef}>
           <div className="inner">
             <div className="topBox">
                 <div className="smalltxt">Contact</div>
